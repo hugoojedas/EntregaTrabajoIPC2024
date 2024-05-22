@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER" stylesheets="@cssBienvenida.css" fx:controller="javafxmlapplication.FXMLDocumentController">
+    <Text text="Bienvenido/a" styleClass="titulo"/>
+    <Text text="Seleccione una opción" styleClass="mensaje"/>
+    <Button text="Registrarse" styleClass="boton-registrarse"/>
+    <Button text="Iniciar sesión" styleClass="boton-iniciar-sesion"/>
+</VBox>
