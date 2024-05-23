@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER" stylesheets="@cssBienvenida.css" fx:controller="javafxmlapplication.FXMLDocumentController">
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER" stylesheets="@cssBienvenida.css" fx:controller="javafxmlapplication.BienvenidaController">
     <Text text="Bienvenido/a" styleClass="titulo"/>
     <Text text="Seleccione una opción" styleClass="mensaje"/>
     <Button text="Registrarse" styleClass="boton-registrarse"/>
