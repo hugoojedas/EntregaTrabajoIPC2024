@@ -62,6 +62,17 @@ public class JavaFXMLApplication extends Application {
         } catch (IOException e) {
         }
     }
+    
+     private void showGastosScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Gastos.fxml"));
+            Pane gastosPane = loader.load();
+            Scene gastosScene = new Scene(gastosPane);
+            primaryStage.setScene(gastosScene);
+            primaryStage.setTitle("Gastos");
+        } catch (IOException e) {
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);
