@@ -1,5 +1,6 @@
 package javafxmlapplication;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -24,7 +25,7 @@ public class JavaFXMLApplication extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Pantalla de Bienvenida");
             primaryStage.show();
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -36,7 +37,7 @@ public class JavaFXMLApplication extends Application {
             Scene registroScene = new Scene(registroPane);
             primaryStage.setScene(registroScene);
             primaryStage.setTitle("Registro");
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -48,7 +49,7 @@ public class JavaFXMLApplication extends Application {
             Scene loginScene = new Scene(loginPane);
             primaryStage.setScene(loginScene);
             primaryStage.setTitle("Iniciar Sesión");
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -60,7 +61,7 @@ public class JavaFXMLApplication extends Application {
             Scene mainMenuScene = new Scene(mainMenuPane);
             primaryStage.setScene(mainMenuScene);
             primaryStage.setTitle("¿Qué quieres hacer?");
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -72,7 +73,7 @@ public class JavaFXMLApplication extends Application {
             Scene gastosScene = new Scene(gastosPane);
             primaryStage.setScene(gastosScene);
             primaryStage.setTitle("Gastos");
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
