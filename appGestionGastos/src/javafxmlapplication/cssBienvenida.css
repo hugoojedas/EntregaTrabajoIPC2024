@@ -42,7 +42,6 @@
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 2);
-    -fx-content-display: top;
 }
 
 .boton-icono:hover {

@@ -1,6 +1,5 @@
 package javafxmlapplication;
 
-import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,17 +16,17 @@ public class JavaFXMLApplication extends Application {
         showWelcomeScreen();
     }
 
-    private void showWelcomeScreen() throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Bienvenida.fxml"));
-        Pane root = loader.load();
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Pantalla de Bienvenida");
-        primaryStage.show();
-
-        // Obtén los botones y define sus acciones
-        root.lookup("#botonRegistrarse").setOnMouseClicked(event -> showRegistroScreen());
-        root.lookup("#botonIniciarSesion").setOnMouseClicked(event -> showLoginScreen());
+    private void showWelcomeScreen() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Bienvenida.fxml"));
+            Pane root = loader.load();
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Pantalla de Bienvenida");
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void showRegistroScreen() {
@@ -37,7 +36,8 @@ public class JavaFXMLApplication extends Application {
             Scene registroScene = new Scene(registroPane);
             primaryStage.setScene(registroScene);
             primaryStage.setTitle("Registro");
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -48,29 +48,32 @@ public class JavaFXMLApplication extends Application {
             Scene loginScene = new Scene(loginPane);
             primaryStage.setScene(loginScene);
             primaryStage.setTitle("Iniciar Sesión");
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    private void showOpcionesScreen() {
+    private void showMainMenuScreen() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/opciones.fxml"));
-            Pane opcionesPane = loader.load();
-            Scene opcionesScene = new Scene(opcionesPane);
-            primaryStage.setScene(opcionesScene);
+            Pane mainMenuPane = loader.load();
+            Scene mainMenuScene = new Scene(mainMenuPane);
+            primaryStage.setScene(mainMenuScene);
             primaryStage.setTitle("¿Qué quieres hacer?");
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
-    
-     private void showGastosScreen() {
+
+    private void showGastosScreen() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Gastos.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/gastos.fxml"));
             Pane gastosPane = loader.load();
             Scene gastosScene = new Scene(gastosPane);
             primaryStage.setScene(gastosScene);
             primaryStage.setTitle("Gastos");
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
