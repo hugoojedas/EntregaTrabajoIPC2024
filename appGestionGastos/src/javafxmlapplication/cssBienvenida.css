@@ -11,14 +11,14 @@
     -fx-fill: #ffffff;
 }
 
-/* Etiquetas */
-.etiqueta {
-    -fx-font-size: 14px;
-    -fx-text-fill: #ffffff;
+/* Mensaje de selección */
+.mensaje {
+    -fx-font-size: 16px;
+    -fx-fill: #dddddd;
 }
 
 /* Botones */
-.boton-registrarse, .boton-iniciar-sesion, .boton-seleccionar {
+.button {
     -fx-background-color: #ffffff;
     -fx-text-fill: #3a7bd5;
     -fx-font-size: 14px;
@@ -29,39 +29,22 @@
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 2);
 }
 
-.boton-registrarse:hover, .boton-iniciar-sesion:hover, .boton-seleccionar:hover {
-    -fx-background-color: #e0e0e0;
-}
-/* Botones con icono */
-.boton-icono {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #3a7bd5;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 2);
-}
-
-.boton-icono:hover {
+.button:hover {
     -fx-background-color: #e0e0e0;
 }
 
-/* Botón de Cerrar Sesión */
-.boton-cerrar-sesion {
-    -fx-background-color: transparent;
+.boton-desactivado {
+    -fx-opacity: 0.5;
+}
+
+/* Etiquetas y campos */
+.label {
     -fx-text-fill: #ffffff;
     -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-border-color: #ffffff;
-    -fx-border-width: 1px;
-    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 2);
+    -fx-padding: 5px;
 }
 
-.boton-cerrar-sesion:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.1);
+.text-field {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
 }

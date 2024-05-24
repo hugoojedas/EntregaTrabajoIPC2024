@@ -4,11 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/cssBienvenida.css</file>
-            <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/datosPersonales.fxml</file>
-            <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/GastosController.java</file>
-            <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/gastos.fxml</file>
+            <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/opciones.fxml</file>
             <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/JavaFXMLApplication.java</file>
-            <file>file:/C:/Users/Hugo/HugoUPV2324/IPC/EntregaTrabajoIPC2024/appGestionGastos/src/javafxmlapplication/OpcionesController.java</file>
         </group>
     </open-files>
 </project-private>

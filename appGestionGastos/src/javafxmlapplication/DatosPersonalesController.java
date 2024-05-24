@@ -1,62 +1,47 @@
 package javafxmlapplication;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class DatosPersonalesController {
 
-    @FXML private Label nombreActualLabel;
-    @FXML private Label contrasenaActualLabel;
-    @FXML private Label correoActualLabel;
-    
-    @FXML private TextField nuevoNombreTextField;
-    @FXML private TextField nuevaContrasenaTextField;
-    @FXML private TextField nuevoCorreoTextField;
-
-    @FXML private Button updateDataButton;
-    @FXML private Button saveDataButton;
+    @FXML private TextField nuevoNombreField;
+    @FXML private TextField nuevaContraseñaField;
+    @FXML private TextField nuevoCorreoField;
+    @FXML private Button actualizarDatosButton;
+    @FXML private Button guardarDatosButton;
 
     @FXML
     private void initialize() {
-        // Supongamos que obtienes los datos del usuario desde la base de datos o alguna fuente de datos
-        String nombreActual = "Nombre de Ejemplo";
-        String contrasenaActual = "********";
-        String correoActual = "ejemplo@correo.com";
-
-        nombreActualLabel.setText(nombreActual);
-        contrasenaActualLabel.setText(contrasenaActual);
-        correoActualLabel.setText(correoActual);
+        // Desactivar los campos de texto y el botón de guardar al inicio
+        nuevoNombreField.setDisable(true);
+        nuevaContraseñaField.setDisable(true);
+        nuevoCorreoField.setDisable(true);
+        guardarDatosButton.setDisable(true);
     }
 
     @FXML
-    private void handleUpdateData() {
-        nuevoNombreTextField.setDisable(false);
-        nuevaContrasenaTextField.setDisable(false);
-        nuevoCorreoTextField.setDisable(false);
-        saveDataButton.setDisable(false);
+    private void handleActualizarDatos() {
+        // Activar los campos de texto y el botón de guardar
+        nuevoNombreField.setDisable(false);
+        nuevaContraseñaField.setDisable(false);
+        nuevoCorreoField.setDisable(false);
+        guardarDatosButton.setDisable(false);
     }
 
     @FXML
-    private void handleSaveData() {
-        String nuevoNombre = nuevoNombreTextField.getText();
-        String nuevaContrasena = nuevaContrasenaTextField.getText();
-        String nuevoCorreo = nuevoCorreoTextField.getText();
-
-        // Aquí puedes añadir la lógica para guardar los nuevos datos en la base de datos
-        // Después de guardar los datos, actualiza las etiquetas y desactiva los campos de texto
-        nombreActualLabel.setText(nuevoNombre);
-        contrasenaActualLabel.setText(nuevaContrasena);
-        correoActualLabel.setText(nuevoCorreo);
-
-        nuevoNombreTextField.setDisable(true);
-        nuevaContrasenaTextField.setDisable(true);
-        nuevoCorreoTextField.setDisable(true);
-        saveDataButton.setDisable(true);
+    private void handleGuardarDatos() {
+        // Implementar la lógica para guardar los datos introducidos
+        // Desactivar los campos de texto y el botón de guardar después de guardar los datos
+        nuevoNombreField.setDisable(true);
+        nuevaContraseñaField.setDisable(true);
+        nuevoCorreoField.setDisable(true);
+        guardarDatosButton.setDisable(true);
     }
 
     @FXML
     private void handleVolver() {
-        // Implementa la lógica para volver a la pantalla anterior
+        // Implementar la lógica para volver a la pantalla anterior
     }
 }
