@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Pos?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -20,24 +19,12 @@
             <padding>
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
-            
-            <!-- Fila de Nombre -->
-            <Label text="Nombre" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <Label fx:id="nombreActualLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-            <Label text="Nuevo Nombre" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
-            <TextField fx:id="nuevoNombreTextField" GridPane.rowIndex="0" GridPane.columnIndex="3" disable="true"/>
-            
-            <!-- Fila de Contraseña -->
-            <Label text="Contraseña" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-            <Label fx:id="contrasenaActualLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-            <Label text="Nueva Contraseña" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
-            <TextField fx:id="nuevaContrasenaTextField" GridPane.rowIndex="1" GridPane.columnIndex="3" disable="true"/>
-            
-            <!-- Fila de Correo Electrónico -->
-            <Label text="Correo Electrónico" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-            <Label fx:id="correoActualLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
-            <Label text="Nuevo Correo Electrónico" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
-            <TextField fx:id="nuevoCorreoTextField" GridPane.rowIndex="2" GridPane.columnIndex="3" disable="true"/>
+            <Label text="Nuevo Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nuevoNombreField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Nueva Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="nuevaContraseñaField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Nuevo Correo Electrónico:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="nuevoCorreoField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         </GridPane>
     </center>
     
@@ -46,9 +33,9 @@
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
-            <Button fx:id="updateDataButton" text="Actualizar Datos" styleClass="boton-icono" onAction="#handleUpdateData"/>
-            <Button fx:id="saveDataButton" text="Guardar Datos" styleClass="boton-icono" disable="true" onAction="#handleSaveData"/>
-            <Button fx:id="volverButton" text="Volver" styleClass="boton-cerrar-sesion" onAction="#handleVolver"/>
+            <Button fx:id="actualizarDatosButton" text="Actualizar Datos" styleClass="boton-icono"/>
+            <Button fx:id="guardarDatosButton" text="Guardar Datos" styleClass="boton-icono"/>
+            <Button fx:id="volverButton" text="Volver" styleClass="boton-cerrar-sesion"/>
         </HBox>
     </bottom>
 </BorderPane>
