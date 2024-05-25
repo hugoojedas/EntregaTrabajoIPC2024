@@ -3,9 +3,15 @@ package javafxmlapplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.event.ActionEvent;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.stage.Modality;
 
 public class GastosController {
 
@@ -14,8 +20,18 @@ public class GastosController {
     @FXML private TableColumn<Gasto, String> fechaColumn;
     @FXML private TableColumn<Gasto, String> nombreColumn;
     @FXML private TableColumn<Gasto, String> descripcionColumn;
+    @FXML
+    private Button addGastoButton;
+    @FXML
+    private Button updateGastoButton;
+    @FXML
+    private Button deleteGastoButton;
+    @FXML
+    private Button printReportButton;
+    @FXML
+    private Button volverButton;
     
-    @FXML private void initialize() {
+    private void initialize() {
         // Configurar las columnas de la tabla
         importeColumn.setCellValueFactory(new PropertyValueFactory<>("importe"));
         fechaColumn.setCellValueFactory(new PropertyValueFactory<>("fecha"));
@@ -35,8 +51,14 @@ public class GastosController {
     }
 
     @FXML
-    private void handleAddGasto() {
+    private void handleAddGasto(ActionEvent event)throws IOException {
         // Implementa la lógica para añadir un gasto
+        FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/AñadirGasto.fxml"));
+        Stage stage = miCargador.load();  // el fxml contiene como raíz a un stage, lo puedes ver en el Scene Builder
+        stage.setTitle("Añadir gasto");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+       
     }
 
     @FXML

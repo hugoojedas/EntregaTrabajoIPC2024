@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Pos?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,32 +9,32 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="javafxmlapplication.GastosController" stylesheets="@cssBienvenida.css">
+<BorderPane stylesheets="@cssBienvenida.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="javafxmlapplication.GastosController">
     <top>
-        <Text text="Gastos" styleClass="titulo" BorderPane.alignment="CENTER"/>
+        <Text styleClass="titulo" text="Gastos" BorderPane.alignment="CENTER" />
     </top>
     
     <center>
         <TableView fx:id="gastosTable" prefHeight="200" prefWidth="300" BorderPane.alignment="CENTER">
             <columns>
-                <TableColumn fx:id="importeColumn" text="Importe" prefWidth="75">
+                <TableColumn fx:id="importeColumn" prefWidth="75" text="Importe">
                     <cellValueFactory>
-                        <PropertyValueFactory property="importe"/>
+                        <PropertyValueFactory property="importe" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="fechaColumn" text="Fecha" prefWidth="100">
+                <TableColumn fx:id="fechaColumn" prefWidth="100" text="Fecha">
                     <cellValueFactory>
-                        <PropertyValueFactory property="fecha"/>
+                        <PropertyValueFactory property="fecha" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="nombreColumn" text="Nombre" prefWidth="100">
+                <TableColumn fx:id="nombreColumn" prefWidth="100" text="Nombre">
                     <cellValueFactory>
-                        <PropertyValueFactory property="nombre"/>
+                        <PropertyValueFactory property="nombre" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="descripcionColumn" text="Descripción" prefWidth="150">
+                <TableColumn fx:id="descripcionColumn" prefWidth="150" text="Descripción">
                     <cellValueFactory>
-                        <PropertyValueFactory property="descripcion"/>
+                        <PropertyValueFactory property="descripcion" />
                     </cellValueFactory>
                 </TableColumn>
             </columns>
@@ -43,15 +42,15 @@
     </center>
     
     <bottom>
-        <HBox spacing="10" alignment="CENTER">
+        <HBox alignment="CENTER" spacing="10">
             <padding>
-                <Insets top="10" right="10" bottom="10" left="10"/>
+                <Insets bottom="10" left="10" right="10" top="10" />
             </padding>
-            <Button fx:id="addGastoButton" text="Añadir Gasto" styleClass="boton-icono"/>
-            <Button fx:id="updateGastoButton" text="Actualizar Gasto" styleClass="boton-icono"/>
-            <Button fx:id="deleteGastoButton" text="Eliminar Gasto" styleClass="boton-icono"/>
-            <Button fx:id="printReportButton" text="Imprimir Estado Cuenta" styleClass="boton-icono"/>
-            <Button fx:id="volverButton" text="Volver" styleClass="boton-cerrar-sesion"/>
+            <Button fx:id="addGastoButton" onAction="#handleAddGasto" styleClass="boton-icono" text="Añadir Gasto" />
+            <Button fx:id="updateGastoButton" onAction="#handleUpdateGasto" styleClass="boton-icono" text="Actualizar Gasto" />
+            <Button fx:id="deleteGastoButton" onAction="#handleDeleteGasto" styleClass="boton-icono" text="Eliminar Gasto" />
+            <Button fx:id="printReportButton" onAction="#handlePrintReport" styleClass="boton-icono" text="Imprimir Estado Cuenta" />
+            <Button fx:id="volverButton" onAction="#handleVolver" styleClass="boton-cerrar-sesion" text="Volver" />
         </HBox>
     </bottom>
 </BorderPane>
