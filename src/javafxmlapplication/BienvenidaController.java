@@ -17,7 +17,7 @@ public class BienvenidaController {
         botonRegistrarse.setOnAction(event -> showRegistroScreen());
         botonIniciarSesion.setOnAction(event -> showLoginScreen());
     }
-
+    // Registro
     private void showRegistroScreen() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Registro.fxml"));
@@ -30,7 +30,7 @@ public class BienvenidaController {
             e.printStackTrace();
         }
     }
-
+    //Login
     private void showLoginScreen() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Login.fxml"));
