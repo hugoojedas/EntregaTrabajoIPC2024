@@ -12,6 +12,8 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.stage.Modality;
+import javafxmlapplication.Gasto;
+
 
 public class GastosController {
 
@@ -55,10 +57,12 @@ public class GastosController {
         // Implementa la lógica para añadir un gasto
         FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/AñadirGasto.fxml"));
         Stage stage = miCargador.load();  // el fxml contiene como raíz a un stage, lo puedes ver en el Scene Builder
+        AñadirGastoController controladorGasto = miCargador.getController();
         stage.setTitle("Añadir gasto");
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.showAndWait();
-       
+        stage.showAndWait();  
+            
+        
     }
 
     @FXML
@@ -82,29 +86,5 @@ public class GastosController {
     }
 
     // Clase interna para representar los datos de un gasto
-    public static class Gasto {
-        private Double importe;
-        private String fecha;
-        private String nombre;
-        private String descripcion;
-
-        public Gasto(Double importe, String fecha, String nombre, String descripcion) {
-            this.importe = importe;
-            this.fecha = fecha;
-            this.nombre = nombre;
-            this.descripcion = descripcion;
-        }
-
-        public Double getImporte() { return importe; }
-        public void setImporte(Double importe) { this.importe = importe; }
-
-        public String getFecha() { return fecha; }
-        public void setFecha(String fecha) { this.fecha = fecha; }
-
-        public String getNombre() { return nombre; }
-        public void setNombre(String nombre) { this.nombre = nombre; }
-
-        public String getDescripcion() { return descripcion; }
-        public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+    
     }
-}
