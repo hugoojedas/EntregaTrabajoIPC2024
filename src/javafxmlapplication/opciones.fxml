@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="javafxmlapplication.OpcionesController" stylesheets="@cssBienvenida.css">
+    <top>
+        <Text text="¿Qué quieres hacer?" styleClass="titulo" BorderPane.alignment="CENTER"/>
+    </top>
+    
+    <center>
+        <HBox spacing="20" alignment="CENTER">
+            <VBox spacing="10" alignment="CENTER">
+                <Button fx:id="gestionarGastosButton" styleClass="boton-icono" contentDisplay="LEFT">
+                    <graphic>
+                        <ImageView fx:id="monedasIcon" fitHeight="24" fitWidth="24" />
+                    </graphic>
+                    Gestionar gastos
+                </Button>
+            </VBox>
+            <VBox spacing="10" alignment="CENTER">
+                <Button fx:id="perfilUsuarioButton" styleClass="boton-icono" contentDisplay="LEFT">
+                    <graphic>
+                        <ImageView fx:id="perfilIcon" fitHeight="24" fitWidth="24" />
+                    </graphic>
+                    Perfil Usuario
+                </Button>
+            </VBox>
+        </HBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="cerrarSesionButton" styleClass="boton-cerrar-sesion">
+                <graphic>
+                    <ImageView fx:id="cerrarSesionIcon" fitHeight="24" fitWidth="24" />
+                </graphic>
+                Cerrar Sesión
+            </Button>
+        </HBox>
+    </bottom>
+</BorderPane>
