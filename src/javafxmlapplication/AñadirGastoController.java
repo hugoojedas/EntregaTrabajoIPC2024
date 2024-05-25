@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+
 /**
  * FXML Controller class
  *
@@ -45,8 +46,14 @@ public class AñadirGastoController implements Initializable {
         // TODO
     }    
 
+        public boolean isOKPressed( ){
+        return pulsadoOK;
+    }
     @FXML
     private void aceptar(ActionEvent event) {
+        
+        pulsadoOK = true;
+        importeField.getScene().getWindow().hide();
        
        
                
@@ -54,6 +61,7 @@ public class AñadirGastoController implements Initializable {
 
     @FXML
     private void cancelar(ActionEvent event) {
+        importeField.getScene().getWindow().hide();
     }
     
 }
